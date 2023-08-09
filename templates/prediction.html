@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleleapt.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+body, html {
+  height: 100%;
+  margin: -14px;
+}
+.bg {
+  background-image: url("static/background.png");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  color: #0e0e3f;
+  font-size: 50px;
+  padding-top: 200px;
+  padding-right: 700px;
+  text-align: center;
+}
+h3 {
+  color: #d2143a;
+  text-align: center;
+  padding-right: 700px;
+  font-size: 100px;
+}
+/*for hystogramme*/
+#histogram {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+        }
+
+        .bar {
+            display: inline-block;
+            width: 20px;
+            margin-right: 2px;
+            background-color: blue;
+        }
+</style>
+</head>
+<body>
+  <div class="bg">
+    <h1>{{name}}, </br> Le risque que vous contractiez <br> une maladie  cardiaque est de:</h1>
+    <br>
+    <h3>{{heart_risk_rate}}</h3>
+  </div>
+  <div id="histogram"></div>
+  <div id="taux_prediction"></div>
+
+    <script>
+        // Données numériques pour l'exemple (vous pouvez les remplacer par vos propres données)
+        let data = [10, 20, 15, 30, 25];
+        let taux_prediction =[25,40,50,15,30]
+
+        // Fonction pour générer l'histogramme
+        function generateHistogram(data) {
+            const histogramContainer = document.getElementById('histogram');
+
+            // Calcul de la hauteur maximale pour ajuster l'échelle
+            const maxData = Math.max(...data);
+            const scale = 300 / maxData;
+
+            // Création des barres de l'histogramme
+            for (let i = 0; i < data.length; i++) {
+                const barHeight = data[i] * scale;
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.height = barHeight + 'px';
+                histogramContainer.appendChild(bar);
+            }
+        }
+        function generatetauxprediction(taux_prediction) {
+            const taux_prediction = document.getElementById('taux_prediction');
+
+            // Calcul de la hauteur maximale pour ajuster l'échelle
+            const maxtaux = Math.max(...taux_prediction);
+            const scale = 300 / maxtaux;
+
+            // Création des barres de l'histogramme
+            for (let i = 0; i < taux_prediction.length; i++) {
+                const barHeight = taux_prediction[i] * scale;
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                bar.style.height = barHeight + 'px';
+                taux_prediction.appendChild(bar);
+            }
+        }
+
+        // Appel de la fonction pour générer l'histogramme avec les données fournies
+        generateHistogram(data);
+        generatetauxprediction(taux_prediction)
+    </script>
+</body>
+</html>
