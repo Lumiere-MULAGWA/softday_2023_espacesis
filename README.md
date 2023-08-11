@@ -16,4 +16,4 @@ Voici les étapes principales du projet :
 
 6. Prédiction et affichage des résultats : Une fois que l'utilisateur a saisi ses informations, l'application web utilise le modèle entraîné pour prédire le risque de maladie cardiaque. Les résultats sont ensuite affichés à l'utilisateur sous une forme de texte avec un pourcentage du risque.
 
-En résumé, le projet de prédiction cardiaque avec Flask consiste à développer une application web qui permet aux utilisateurs d'obtenir une prédiction de leur risque de maladie cardiaque en fonction de leurs caractéristiques médicales. Cela implique la collecte et le prétraitement des données, l'entraînement d'un modèle d'apprentissage automatique, le développement d'une interface utilisateur conviviale.
+En résumé, le projet de prédiction cardiaque avec Flask consiste en une application web qui permet aux utilisateurs d'obtenir une prédiction de leur risque de maladie cardiaque en fonction de leurs caractéristiques médicales.
