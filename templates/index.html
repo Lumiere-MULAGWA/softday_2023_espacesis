@@ -293,11 +293,112 @@ h1{
               width: calc(60% + 16px);
               }
               } */
-    </style>
 
+      
+
+        
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" type="image/x-icon" href="static/image/heart-icon.webp">
 
   </head>
   <body   >
+
+    <header class="header">
+
+      <a href="/" class="logo"> <i class="fas fa-heartbeat"></i> aziza heart </a>
+
+      <nav class="navbar">
+          <a href="#">home</a>
+          <a href="#predictform">predict</a>
+          <a href="#">why?</a>
+          <a href="#">about</a>
+          <a href="#">doctors</a>
+          <a href="#">blogs</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+  </header>
+
+
+
+  <section class="home" id="home">
+
+      <div class="image">
+          <img src="../static/image/home-img.svg" alt="">
+      </div>
+
+      <div class="content">
+          <h3>Comment va votre Coeur???</h3>
+          <p> Utilisez l'intelligence artifficielle pour vous aider à savoir comment il va???
+          </p>
+          <a href="#predictform" class="btn"> faire la prediction  <span class="fas fa-chevron-right"></span> </a>
+      </div>
+
+  </section>
+
+
+
+  <section class="icons-container" id="why">
+
+      <div class="icons">
+          <i class="fas fa-user-md"></i>
+          <h3>il y'a 1200</h3>
+          <p> cardiologue en RD congo</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-users"></i>
+          <h3>Pres de 50400</h3>
+          <p>meurt chaque année dans le monde</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-procedures"></i>
+          <h3>chaque 30 minutes </h3>
+          <p>il est crusial de sauvé des vies</p>
+      </div>
+
+      <div class="icons">
+          <i class="fas fa-hospital"></i>
+          <h3>Pres de  17000</h3>
+          <p>cas recencés chaque jour </p>
+      </div>
+
+  </section>
+<!--boc about-->
+
+  <section class="about" id="about">
+
+    <h1 class="heading"> <span>About</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="../static/image/about-img.svg" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Luminos</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
+            </p>
+            <p>c'est un projet realiser pour le projet de softday 2023
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+  <!--boc qui traite la prediction-->
+
     
     <div class="main-block">
 
@@ -313,195 +414,226 @@ h1{
             <div class="square" style="--i:4;"></div>
         </div>
       
-<div  id="msform" >
-    <form action="{{url_for('get_prediction')}}" >
-      <h1>AZIZA HEARTH</h1>
-      <div class="container">
-      <fieldset>
-        <legend>
-          <h3> Informations Personnelles</h3>
-        </legend>
-        <div  class="account-details">
-          <div><label>Nom </label><input type="text" name="name" required></div>
-          <div><label>Sexe </label><select id="sex" name="sex">
-            <option value="Male">Masculin</option>
-            <option value="Female">Feminin</option>
-            </select>
-          </div>
-          <div>
-            <label>Age </label>
-            <select id="age" name="age">
-            <option value="18-24">18-24</option>
-            <option value="25-29">25-29</option>
-            <option value="30-34">30-34</option>
-            <option value="35-39">35-39</option>
-            <option value="40-44">40-44</option>
-            <option value="45-49">45-49</option>
-            <option value="50-54">50-54</option>
-            <option value="55-59">55-59</option>
-            <option value="60-64">60-64</option>
-            <option value="65-69">65-69</option>
-            <option value="70-74">70-74</option>
-            <option value="75-79">75-79</option>
-            <option value="80 or older">80+</option>
-            </select>
-          </div>
-          <div><label>Race </label>
-            <select id="race" name="race">  
-             <option value="Black">Noir</option>
-            <option value="Asian">Asiatique</option>
-            <option value="American Indian/Alaskan Native"> Noir americain </option>
-            <option value="Hispanic">Hispanique</option>
-            <option value="White">Blanc</option>
-            <option value="Other">Autres</option>
-            </select>
-          </div>
-          <div><label>Taille </label>
-            <input type="number" id="height" name="height" placeholder="cm" min="0" max="225" required>
-          </div>
-          <div><label>Poids </label>
-            <input type="number" id="weight" name="weight" placeholder="kg" min="0" max="225" required>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3> Informations General</h3>
-        </legend>
-        <div  class="personal-details">
-          <div>
-            <div>
-              <label>Vous fumez ou avez vous déja fumé?</label>
-              <select id="smoking" name="smoking">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Prenez vous de l'alcool (homme: > 14 verres & femme: > 7 verres par semaine)</label>
-              <select id="alcohol" name="alcohol">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Commentest votre état général de santé..</label>
-              <select id="general_health" name="general_health">
-              <option value="Excellent">Excellent</option>
-              <option value="Very good">Très Bon</option>
-              <option value="Good">Bon</option>
-              <option value="Fair">Assez Bien</option>
-              <option value="Poor">Mal</option>
-              </select>
-            </div>
-            <div>
-              <label>Pendant combien d'heure dormez vous sur 24 heures? </label>
-              <input type="number" id="sleep_time" name="sleep_time" min="0" max="24" required placeholder=" Champ obligatoire">
-            </div>
-            <div>
-              <label>Combien de jour aviez-vous eu de malaise cerebrale (mot de tête et autres) dans ses 30 dernier jours ??? </label>
-              <input type="number" id="mental_health" name="mental_health" min="0" max="30" required placeholder=" Champ obligatoire">
-            </div>
-            <div>
-              <label> Combien de jour aviez-vous eu de malaise physique() dans ses 30 dernier jours </label>
-              <input type="number" id="physical_health" name="physical_health" min="0" max="30" required placeholder=" Champ obligatoire">
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3> Information de Santé</h3>
-        </legend>
-        <div  class="personal-details">
-          <div>
-            <div>
-              <label>Faites vous de l'exercice regulierement ?</label>
-              <select id="physical_activity" name="physical_activity">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Avez vous de diffculté à marcher ou  vous deplacer???</label>
-              <select id="diff_walking" name="diff_walking">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Avez vous deja eu un AVC ????</label>
-              <select id="stroke" name="stroke">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Etes vous un diabetique???</label>
-              <select id="diabetic" name="diabetic">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Avez vous de l'asthme ???</label>
-              <select id="asthma" name="asthma">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Avez vous un cancer de la peau ???</label>
-              <select id="skin_cancer" name="skin_cancer">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-            <div>
-              <label>Avez vous une maladie rénale?</label>
-              <select id="kidney_disease" name="kidney_disease">
-              <option value="Yes">Oui</option>
-              <option value="No">Non</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      <button class="btn" type="submit" href="/">Analisez</button>
-      </fieldset>
-    </form>
-</div>
-    </div> 
+        <section class="book" id="book">
+
+          
+
+        </section>
+
+        <div  id="msform" >
+
+
+          <h1 class="heading"> <span>Predire </span> Maintenant </h1>
   
+  
+              <div class="image">
+                  <img src="../static/image/book-img.svg" alt="">
+              </div>
+            <form id="predictform" action="{{url_for('get_prediction')}}" >
+              <h1>AZIZA HEARTH</h1>
+              <div class="container">
+              <fieldset>
+                <legend>
+                  <h3> Informations Personnelles</h3>
+                </legend>
+                <div  class="account-details">
+                  <div><label>Nom </label><input type="text" name="name" required></div>
+                  <div><label>Sexe </label><select id="sex" name="sex">
+                    <option value="Male">Masculin</option>
+                    <option value="Female">Feminin</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Age </label>
+                    <select id="age" name="age">
+                    <option value="18-24">18-24</option>
+                    <option value="25-29">25-29</option>
+                    <option value="30-34">30-34</option>
+                    <option value="35-39">35-39</option>
+                    <option value="40-44">40-44</option>
+                    <option value="45-49">45-49</option>
+                    <option value="50-54">50-54</option>
+                    <option value="55-59">55-59</option>
+                    <option value="60-64">60-64</option>
+                    <option value="65-69">65-69</option>
+                    <option value="70-74">70-74</option>
+                    <option value="75-79">75-79</option>
+                    <option value="80 or older">80+</option>
+                    </select>
+                  </div>
+                  <div><label>Race </label>
+                    <select id="race" name="race">  
+                    <option value="Black">Noir</option>
+                    <option value="Asian">Asiatique</option>
+                    <option value="American Indian/Alaskan Native"> Noir americain </option>
+                    <option value="Hispanic">Hispanique</option>
+                    <option value="White">Blanc</option>
+                    <option value="Other">Autres</option>
+                    </select>
+                  </div>
+                  <div><label>Taille </label>
+                    <input type="number" id="height" name="height" placeholder="cm" min="0" max="225" required>
+                  </div>
+                  <div><label>Poids </label>
+                    <input type="number" id="weight" name="weight" placeholder="kg" min="0" max="225" required>
+                  </div>
+                </div>
+              </fieldset>
+            <fieldset>
+              <legend>
+                <h3> Informations General</h3>
+              </legend>
+              <div  class="personal-details">
+                <div>
+                  <div>
+                    <label>Vous fumez ou avez vous déja fumé?</label>
+                    <select id="smoking" name="smoking">
+                    <option value="1">Oui</option>
+                    <option value="0">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Prenez vous de l'alcool (homme: > 14 verres & femme: > 7 verres par semaine)</label>
+                    <select id="alcohol" name="alcohol">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Commentest votre état général de santé..</label>
+                    <select id="general_health" name="general_health">
+                    <option value="Excellent">Excellent</option>
+                    <option value="Very good">Très Bon</option>
+                    <option value="Good">Bon</option>
+                    <option value="Fair">Assez Bien</option>
+                    <option value="Poor">Mal</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Pendant combien d'heure dormez vous sur 24 heures? </label>
+                    <input type="number" id="sleep_time" name="sleep_time" min="0" max="24" required placeholder=" Champ obligatoire">
+                  </div>
+                  <div>
+                    <label>Combien de jour aviez-vous eu de malaise cerebrale (mot de tête et autres) dans ses 30 dernier jours ??? </label>
+                    <input type="number" id="mental_health" name="mental_health" min="0" max="30" required placeholder=" Champ obligatoire">
+                  </div>
+                  <div>
+                    <label> Combien de jour aviez-vous eu de malaise physique() dans ses 30 dernier jours </label>
+                    <input type="number" id="physical_health" name="physical_health" min="0" max="30" required placeholder=" Champ obligatoire">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>
+                <h3> Information de Santé</h3>
+              </legend>
+              <div  class="personal-details">
+                <div>
+                  <div>
+                    <label>Faites vous de l'exercice regulierement ?</label>
+                    <select id="physical_activity" name="physical_activity">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Avez vous de diffculté à marcher ou  vous deplacer???</label>
+                    <select id="diff_walking" name="diff_walking">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Avez vous deja eu un AVC ????</label>
+                    <select id="stroke" name="stroke">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Etes vous un diabetique???</label>
+                    <select id="diabetic" name="diabetic">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Avez vous de l'asthme ???</label>
+                    <select id="asthma" name="asthma">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Avez vous un cancer de la peau ???</label>
+                    <select id="skin_cancer" name="skin_cancer">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Avez vous une maladie rénale?</label>
+                    <select id="kidney_disease" name="kidney_disease">
+                    <option value="Yes">Oui</option>
+                    <option value="No">Non</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            <button class="btn" type="submit" href="/">Analisez</button>
+            </fieldset>
+          </form>
+      </div>
+          </div> 
+        
 
 
-    <div class="loading_cont">
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="loader">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-        <feBlend in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-      <linearGradient id="MyGradient">
-          <stop offset="5%"  stop-color="#40204c"/>
-          <stop offset="40%" stop-color="#a3225c"/>
-          <stop offset="100%" stop-color="#e24926"/>
-      </linearGradient>
-    </defs>
-    <mask id="maska">
-      <g class="blobs">
-        <circle class="blob" cx="440" cy="250" r="30" transform="rotate(0) translate(0, 0) rotate(0)"/>
-        <circle class="blob" cx="500" cy="320" r="70"  transform="rotate(0) translate(0, 0) rotate(0)"/>
-        <circle class="blob" cx="300" cy="390" r="40"  transform="rotate(0) translate(0, 0) rotate(0)"/>
-        <circle class="blob" cx="380" cy="390" r="80"  transform="rotate(0) translate(0, 0) rotate(0)"/>
-        <circle class="blob" cx="470" cy="450" r="20"  transform="rotate(0) translate(0, 0) rotate(0)"/>
-      </g>
-    </mask>
-    <rect x="200" y="200"  mask="url(#maska)" fill="url(#MyGradient)" width="400" height="400">
-  </svg>  
-  </div>
-</div>
+          <div class="loading_cont">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="loader">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feBlend in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+            <linearGradient id="MyGradient">
+                <stop offset="5%"  stop-color="#40204c"/>
+                <stop offset="40%" stop-color="#a3225c"/>
+                <stop offset="100%" stop-color="#e24926"/>
+            </linearGradient>
+          </defs>
+          <mask id="maska">
+            <g class="blobs">
+              <circle class="blob" cx="440" cy="250" r="30" transform="rotate(0) translate(0, 0) rotate(0)"/>
+              <circle class="blob" cx="500" cy="320" r="70"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+              <circle class="blob" cx="300" cy="390" r="40"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+              <circle class="blob" cx="380" cy="390" r="80"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+              <circle class="blob" cx="470" cy="450" r="20"  transform="rotate(0) translate(0, 0) rotate(0)"/>
+            </g>
+          </mask>
+          <rect x="200" y="200"  mask="url(#maska)" fill="url(#MyGradient)" width="400" height="400">
+        </svg>  
+        </div>
+      </div>
 
-</section>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+  <script>
+      let menu = document.querySelector('#menu-btn');
+      let navbar = document.querySelector('.navbar');
+
+      menu.onclick = () => {
+          menu.classList.toggle('fa-times');
+          navbar.classList.toggle('active');
+      }
+
+      window.onscroll = () => {
+          menu.classList.remove('fa-times');
+          navbar.classList.remove('active');
+      }
+  </script>
   </body>
 </html>
